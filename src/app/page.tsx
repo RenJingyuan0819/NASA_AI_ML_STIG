@@ -747,6 +747,32 @@ const lectures: Lecture[] = [
       },
     ],
   },
+  {
+    number: 26,
+    title: "Foundations of LLM Agents",
+    speaker: "Josh Speagle",
+    affiliation: "University of Toronto",
+    description:
+      "How LLM agents work from first principles — context in, a probability distribution out, one token drawn and appended — and what changes when tools enter the loop: tool results are text the model did not write, and they can be any length. Why a hard prediction objective over endlessly varied text forces general strategies rather than memorization, and how the harness around the model — prompt assembly, tools and permissions, instruction files, skills, memory, and agents as tools — is the part you control. The talk is itself the worked example: it was designed, researched, and built by an agent workflow, and the design spec that directed it is published alongside the slides.",
+    topics: [
+      "Tokens, context windows, and the next-token distribution",
+      "Tool calls and how their results re-enter the context",
+      "Why pre-training forces general strategies, not memorization",
+      "The harness: prompt assembly, permissions, memory, skills, agents as tools",
+      "Working with agents: clear vision, communication, execution",
+      "State of the art: agent task horizons and astronomy benchmarks",
+    ],
+    links: [
+      {
+        label: "View Slides (PDF)",
+        href: `${BASE_PATH}/Resources/Lecture26_Josh_Speagle/Foundations_of_LLM_Agents_and_State_of_the_Art_STIG.pdf`,
+      },
+      {
+        label: "View Talk Design Spec (markdown)",
+        href: `${GITHUB_BASE}/Resources/Lecture26_Josh_Speagle/TALK_DESIGN.md`,
+      },
+    ],
+  },
 ];
 
 interface ScheduleRow {
@@ -796,6 +822,8 @@ const schedule: ScheduleEntry[] = [
   { week: 21, date: "May 4", topic: "NASA ASTRA Initiative", speaker: "Peter Kurczynski & Swara Ravindranath, NASA GSFC" },
   { week: 24, date: "Jun 1", topic: "From Text to Spaceship", speaker: "Ryan McClelland, NASA GSFC" },
   { week: 25, date: "Jun 29, 4 pm ET", topic: "Open Science and AI at NASA", speaker: "Steve Crawford, NASA SMD OCSDO" },
+  { module: "Module 9: Agentic AI (2026–2027 Series)" },
+  { week: 26, date: "Sep 14", topic: "Foundations of LLM agents and state of the art", speaker: "Josh Speagle, U. of Toronto" },
 ];
 
 interface LeadershipPerson {
