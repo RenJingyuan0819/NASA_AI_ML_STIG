@@ -922,6 +922,10 @@ const fall2026: SeasonSession[] = [
         label: "View Slides (PDF)",
         href: `${BASE_PATH}/Resources/Lecture26_Josh_Speagle/Foundations_of_LLM_Agents_and_State_of_the_Art_STIG.pdf`,
       },
+      {
+        label: "View Talk Design Spec (markdown)",
+        href: `${GITHUB_BASE}/Resources/Lecture26_Josh_Speagle/TALK_DESIGN.md`,
+      },
     ],
   },
   { date: "Sep 21", topic: "Hands-on session I: agentic coding and research tools", speaker: "Christopher Stubbs", affiliation: "Harvard University" },
