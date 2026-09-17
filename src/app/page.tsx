@@ -880,10 +880,26 @@ interface SeasonSession {
   speaker?: string;
   affiliation?: string;
   noMeeting?: boolean;
+  links?: { label: string; href: string }[];
 }
 
 const fall2026: SeasonSession[] = [
-  { date: "Sep 14", topic: "Foundations of LLM agents and state of the art", speaker: "Josh Speagle", affiliation: "University of Toronto" },
+  {
+    date: "Sep 14",
+    topic: "Foundations of LLM agents and state of the art",
+    speaker: "Josh Speagle",
+    affiliation: "University of Toronto",
+    links: [
+      {
+        label: "How the talk was designed (markdown)",
+        href: `${GITHUB_BASE}/Resources/Lecture26_Josh_Speagle/TALK_DESIGN.md`,
+      },
+      {
+        label: "Agent research brief (markdown)",
+        href: `${GITHUB_BASE}/Resources/Lecture26_Josh_Speagle/web_brief.md`,
+      },
+    ],
+  },
   { date: "Sep 21", topic: "Hands-on session I: agentic coding and research tools", speaker: "Christopher Stubbs", affiliation: "Harvard University" },
   { date: "Sep 28", topic: "Hands-on session II: agentic coding and research tools", speaker: "Serat Saad", affiliation: "The Ohio State University" },
   { date: "Oct 5", topic: "Transformers, attention, and pre-training", speaker: "Josh Nguyen", affiliation: "University of Pennsylvania" },
@@ -1257,6 +1273,22 @@ function SeasonSection() {
                     <span className={`block text-sm mt-0.5 ${s.speaker ? "text-white/55" : "text-white/40 italic"}`}>
                       {s.speaker ? `${s.speaker}${s.affiliation ? ` · ${s.affiliation}` : ""}` : "Speaker to be announced"}
                     </span>
+                  )}
+                  {s.links && s.links.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {s.links.map((l, i) => (
+                        <a
+                          key={i}
+                          href={l.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 rounded-full border border-green-light/25 bg-green-light/10 px-3 py-1 text-xs font-display font-semibold text-green-light hover:bg-green-light/20 hover:text-white transition-colors"
+                        >
+                          {l.label}
+                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                        </a>
+                      ))}
+                    </div>
                   )}
                 </div>
               </li>
