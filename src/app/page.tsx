@@ -891,12 +891,8 @@ const fall2026: SeasonSession[] = [
     affiliation: "University of Toronto",
     links: [
       {
-        label: "How the talk was designed (markdown)",
-        href: `${GITHUB_BASE}/Resources/Lecture26_Josh_Speagle/TALK_DESIGN.md`,
-      },
-      {
-        label: "Agent research brief (markdown)",
-        href: `${GITHUB_BASE}/Resources/Lecture26_Josh_Speagle/web_brief.md`,
+        label: "View Slides (PDF)",
+        href: `${BASE_PATH}/Resources/Lecture26_Josh_Speagle/Foundations_of_LLM_Agents_and_State_of_the_Art_STIG.pdf`,
       },
     ],
   },
